@@ -15,4 +15,6 @@ export default class PokeApi {
   async getSpecies(identifier) {
     return await this.request('/pokemon-species/' + identifier);
   }
+
+
 }

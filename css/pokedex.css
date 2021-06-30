@@ -46,34 +46,6 @@
     background-color: #98fe00;
 }
 
-.pokemon-species.gray {
-    background-color: #bbb;
-}
-
-.pokemon-species.green {
-    background-color: #4CAF50;
-}
-
-.pokemon-species.pink {
-    background-color: #E91E63;
-}
-
-.pokemon-species.purple {
-    background-color: #9C27B0;
-}
-
-.pokemon-species.red {
-    background-color: #F44336;
-}
-
-.pokemon-species.white {
-    background-color: #FFF;
-}
-
-.pokemon-species.yellow {
-    background-color: #FFC107;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -81,16 +53,7 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
     background-image: url(/assets/images/bg-low-res.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
     transition: background-image 0.5s ease-in-out;
 }
 
@@ -105,45 +68,25 @@ body::before {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* poke-dex */
-#pokedex {
-    height: calc(342px * var(--transform));
-    width: calc(228px * 2 * var(--transform));
-    display: flex;
-    border-radius: 10px;
-}
-
-/* LEFT PANEL */
-#left-panel {
-    background-color: var(--main-bg-color);
-    box-sizing: border-box;
-    height: 100%;
-    width: 50%;
-    display: grid;
-    grid-template-rows: calc(77px * var(--transform)) repeat(3, 1fr);
-    grid-row-gap: calc(7px * var(--transform));
-    border: solid black 3px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 7px;
-}
-
-svg.left-svg,
-svg.right-svg {
+svg.crooked-line,
+svg.crooked-line {
     height: calc(77px * var(--transform));
     width: calc(228px * var(--transform));
 }
 
-/* Top Lights */
-
-.lights-container {
-    position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.pokedex {
+    height: calc(342px * var(--transform));
+    width: calc(228px * 2 * var(--transform));
 }
 
-.left-svg {
+.pokedex .left-panel {
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-rows: calc(77px * var(--transform)) repeat(3, 1fr);
+    grid-row-gap: calc(7px * var(--transform));
+}
+
+.pokedex .left-panel svg {
     position: absolute;
     z-index: +5;
 }

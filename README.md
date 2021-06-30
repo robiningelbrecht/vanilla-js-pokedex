@@ -1,6 +1,6 @@
 # Pokedex in vanilla JS
 
-Demo: [https://fibonacci.robiningelbrecht.be/](https://fibonacci.robiningelbrecht.be/)
+Demo: [https://pokedex.robiningelbrecht.be/](https://pokedex.robiningelbrecht.be/)
 
 ## Run local
 

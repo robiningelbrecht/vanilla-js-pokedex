@@ -46,8 +46,10 @@ export default class App {
     let species = await this.pokeApi.getSpecies(id);
     let pokemon = await this.pokeApi.getPokemon(id);
 
+    //@TODO: add cache.
+
     this.flivkity.cells[index].element.style.backgroundImage = 'url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/' + id + '.svg)';
-    this.flivkity.cells[index].element.classList.add('processed');
+    this.flivkity.cells[index].element.classList.add('cached');
     this.flivkity.cells[index].element.style.backgroundColor = this.getPokedexHexColor(species.color.name);
   }
 
