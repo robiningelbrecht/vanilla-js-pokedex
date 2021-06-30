@@ -46,6 +46,14 @@
     background-color: #98fe00;
 }
 
+.border-3{
+    border-width: 3px;
+}
+
+.rounded-1\/2{
+    border-radius: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -68,8 +76,7 @@ body::before {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-svg.crooked-line,
-svg.crooked-line {
+svg.crooked-line{
     height: calc(77px * var(--transform));
     width: calc(228px * var(--transform));
 }
@@ -86,64 +93,41 @@ svg.crooked-line {
     grid-row-gap: calc(7px * var(--transform));
 }
 
-.pokedex .left-panel svg {
-    position: absolute;
-    z-index: +5;
-}
-
-.big-light-boarder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pokedex .left-panel .big-light-boarder {
     margin-left: calc(12px * var(--transform));
     margin-top: calc(3px * var(--transform));
     height: calc(60px * var(--transform));
     width: calc(60px * var(--transform));
-    border: solid black;
-    border-radius: 50%;
-    background-color: white;
 }
 
-.big-light {
+.pokedex .left-panel .big-light {
     height: calc(50px * var(--transform));
     width: calc(50px * var(--transform));
-    border-radius: 50%;
-    border: solid black;
 }
 
-.big-dot {
+.pokedex .left-panel .big-dot {
     height: calc(15px * var(--transform));
     width: calc(15px * var(--transform));
-    position: relative;
     top: calc(7px * var(--transform));
     left: calc(10px * var(--transform));
-    border-radius: 50%;
 }
 
-.small-lights-container {
+.pokedex .left-panel .small-lights-container {
     margin-left: calc(15px * var(--transform));
     margin-top: calc(10px * var(--transform));
     width: calc(70px * var(--transform));
-    height: 100%;
-    display: flex;
-    align-self: start;
-    justify-content: space-around;
 }
 
-.small-light {
-    border: solid black;
+.pokedex .left-panel .small-light {
     width: calc(16px * var(--transform));
     height: calc(16px * var(--transform));
-    border-radius: 50%;
 }
 
-.dot {
+.pokedex .left-panel .dot {
     height: calc(5px * var(--transform));
     width: calc(5px * var(--transform));
-    position: relative;
-    top: calc(3px * var(--transform));
+    top: calc(2px * var(--transform));
     left: calc(3px * var(--transform));
-    border-radius: 50%;
 }
 
 /* Center Screen */
