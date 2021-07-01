@@ -10,7 +10,7 @@ export default class App {
   init() {
     for (let i = 1; i <= 151; i++) {
       let slide = document.createElement('div');
-      slide.classList.add(...['slide', 'pokemon-species']);
+      slide.classList.add(...['slide']);
       this.flickity_el.appendChild(slide);
     }
 
