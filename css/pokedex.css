@@ -46,14 +46,6 @@
     background-color: #98fe00;
 }
 
-.border-3{
-    border-width: 3px;
-}
-
-.rounded-1\/2{
-    border-radius: 50%;
-}
-
 * {
     margin: 0;
     padding: 0;
