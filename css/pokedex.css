@@ -181,7 +181,7 @@ svg.crooked-line{
     background-repeat: no-repeat;
     background-size: auto calc(100px * var(--transform));
     background-image: url('/assets/images/loading.svg');
-    transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: background-image 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .bottom-screen-lights {
@@ -261,7 +261,7 @@ svg.crooked-line{
 .nav-buttons-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: calc(190px * var(--transform));
     justify-self: center;
 }
