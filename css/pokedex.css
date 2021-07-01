@@ -68,102 +68,24 @@ body::before {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-svg.crooked-line{
-    height: calc(77px * var(--transform));
-    width: calc(228px * var(--transform));
-}
-
 .pokedex {
-    height: calc(342px * var(--transform));
     width: calc(228px * 2 * var(--transform));
 }
 
 .pokedex .left-panel {
     background-color: var(--main-bg-color);
-    display: grid;
     grid-template-rows: calc(77px * var(--transform)) repeat(3, 1fr);
     grid-row-gap: calc(7px * var(--transform));
 }
 
-.pokedex .left-panel .big-light-boarder {
-    margin-left: calc(12px * var(--transform));
-    margin-top: calc(3px * var(--transform));
-    height: calc(60px * var(--transform));
-    width: calc(60px * var(--transform));
-}
-
-.pokedex .left-panel .big-light {
-    height: calc(50px * var(--transform));
-    width: calc(50px * var(--transform));
-}
-
-.pokedex .left-panel .big-dot {
-    height: calc(15px * var(--transform));
-    width: calc(15px * var(--transform));
-    top: calc(7px * var(--transform));
-    left: calc(10px * var(--transform));
-}
-
-.pokedex .left-panel .small-lights-container {
-    margin-left: calc(15px * var(--transform));
-    margin-top: calc(10px * var(--transform));
-    width: calc(70px * var(--transform));
-}
-
-.pokedex .left-panel .small-light {
-    width: calc(16px * var(--transform));
-    height: calc(16px * var(--transform));
-}
-
-.pokedex .left-panel .dot {
-    height: calc(5px * var(--transform));
-    width: calc(5px * var(--transform));
-    top: calc(2px * var(--transform));
-    left: calc(3px * var(--transform));
-}
-
-/* Center Screen */
-
-.screen-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.screen {
-    width: calc(190px * var(--transform));
-    height: calc(150px * var(--transform));
-    border: solid black;
+.pokedex .left-panel .pokemon-visual {
     border-radius: 0 0 0 17%;
-    display: grid;
     grid-template-rows: 10% 72% 18%;
     background-color: var(--secondary-screen-bg-color);
 }
 
-.top-screen-lights {
-    display: flex;
-    justify-self: center;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: calc(20px * var(--transform));
-}
-
-.mini-light {
-    border: solid black 1px;
-    width: calc(5px * var(--transform));
-    height: calc(5px * var(--transform));
-    border-radius: 50%;
-}
-
-#main-screen {
-    height: calc(105px * var(--transform));
-    width: 80%;
-    justify-self: center;
+.pokedex .left-panel .pokemon-visual .js-flickity {
     background-color: var(--main-screen-bg-color);
-    border: solid black 2px;
-    border-radius: 5%;
-    overflow: hidden;
 }
 
 .slide {
@@ -174,27 +96,6 @@ svg.crooked-line{
     background-size: auto calc(100px * var(--transform));
     background-image: url('/assets/images/loading.svg');
     transition: background-image 0.5s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.bottom-screen-lights {
-    display: flex;
-    width: 75%;
-    justify-self: center;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bottom-screen-lights .small-light {
-    border: solid black 2px;
-    width: calc(12px * var(--transform));
-    height: calc(12px * var(--transform));
-}
-
-.bottom-screen-lights .dot {
-    height: calc(4px * var(--transform));
-    width: calc(4px * var(--transform));
-    top: calc(2.5px * var(--transform));
-    left: calc(2px * var(--transform));
 }
 
 .line {

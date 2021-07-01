@@ -15,45 +15,44 @@
     <link href="css/pokedex.css" rel="stylesheet">
 </head>
 <body class="h-screen w-screen flex items-center justify-center overflow-x-hidden bg-center bg-cover bg-no-repeat" data-background="assets/images/bg.jpg">
-<div class="pokedex flex">
-    <div class="left-panel w-2/4 grid grid rounded-t-xl rounded-bl-xl border-3 border-black">
+<div class="pokedex flex h-tf-342">
+    <div class="left-panel w-2/4 grid rounded-t-xl rounded-bl-xl border-3 border-black">
         <div>
-            <svg class="crooked-line z-10 absolute">
+            <svg class="z-10 absolute w-tf-228 h-tf-77">
                 <!--<polyline points="0,75 70,75 90,38 228,38" style="fill: none; stroke: black; stroke-width: 3"/>-->
                 <polyline points="0,150 140,150 180,76 456,76" style="fill: none; stroke: black; stroke-width: 3"/>
             </svg>
             <div class="flex items-center justify-start">
-                <div class="big-light-boarder flex justify-center items-center border-3 border-black rounded-1/2 bg-white">
-                    <div class="big-light blue border-3 border-black rounded-1/2">
-                        <div class="big-dot light-blue relative rounded-1/2"></div>
+                <div class="flex justify-center items-center border-3 border-black rounded-1/2 bg-white ml-tf-12 mt-tf-3 h-tf-60 w-tf-60">
+                    <div class="blue border-3 border-black rounded-1/2 w-tf-50 h-tf-50">
+                        <div class="light-blue relative rounded-1/2 w-tf-15 h-tf-15 top-tf-7 left-tf-10"></div>
                     </div>
                 </div>
-                <div class="small-lights-container flex justify-around self-start h-full">
-                    <div class="small-light red border-3 border-black rounded-1/2">
-                        <div class="dot light-red relative rounded-1/2"></div>
+                <div class="flex justify-around self-start h-full ml-tf-15 mt-tf-10 w-tf-70">
+                    <div class="red border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                        <div class="light-red relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
-                    <div class="small-light yellow border-3 border-black rounded-1/2">
-                        <div class="dot light-yellow relative rounded-1/2"></div>
+                    <div class="yellow border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                        <div class="light-yellow relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
-                    <div class="small-light green border-3 border-black rounded-1/2">
-                        <div class="dot light-green relative rounded-1/2"></div>
+                    <div class="green border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                        <div class="light-green relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Center Screen -->
-        <div class="screen-container">
-            <div class="screen">
-                <div class="top-screen-lights">
-                    <div class="mini-light red"></div>
-                    <div class="mini-light red"></div>
+        <div class="flex justify-center items-center">
+            <div class="pokemon-visual grid w-tf-190 h-tf-150 border-3 border-black">
+                <div class="flex justify-between items-center justify-self-center w-tf-20">
+                    <div class="red border border-black w-tf-5 h-tf-5 rounded-1/2"></div>
+                    <div class="red border border-black w-tf-5 h-tf-5 rounded-1/2"></div>
                 </div>
-                <div id="main-screen" class="js-flickity">
+                <div class="js-flickity w-4/5 h-tf-105 justify-self-center border-2 border-black overflow-hidden rounded-lg">
 
                 </div>
-                <div class="bottom-screen-lights">
-                    <div class="small-light red relative rounded-1/2">
-                        <div class="dot light-red absolute rounded-1/2"></div>
+                <div class="flex justify-self-center justify-between items-center w-4/5">
+                    <div class="red relative rounded-1/2 border-2 border-black w-tf-12 h-tf-12">
+                        <div class="light-red absolute rounded-1/2 w-tf-4 h-tf-4 top-tf-2 left-tf-2"></div>
                     </div>
                     <div class="burger">
                         <div class="line"></div>
@@ -93,7 +92,7 @@
     <div id="right-panel">
         <!-- Blank container -->
         <div class="empty-container">
-            <svg class="crooked-line">
+            <svg class="w-tf-228 h-tf-77">
                 <!--<polyline
                         points="0,0 0,40 138,40 158,75 250,75 250,0 0,0"
                         style="fill: transparent; stroke: none;"
