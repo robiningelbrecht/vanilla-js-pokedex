@@ -1,10 +1,4 @@
 :root {
-    --main-bg-color: #CE1C24;
-    --secondary-bg-color: #f2f2f2;
-    --main-screen-bg-color: #fff;
-    --secondary-screen-bg-color: #ddd;
-    --main-buttons-color: #585858;
-    --square-buttons-color: #7ca9f7;
     --transform: 1;
 }
 
@@ -12,38 +6,6 @@
     :root {
         --transform: 2;
     }
-}
-
-.red {
-    background-color: #ff0000;
-}
-
-.yellow {
-    background-color: #fecb65;
-}
-
-.green {
-    background-color: #32cb65;
-}
-
-.blue {
-    background-color: #3298cb;
-}
-
-.light-blue {
-    background-color: #85bdfe;
-}
-
-.light-red {
-    background-color: #fe98cb;
-}
-
-.light-yellow {
-    background-color: #fefecb;
-}
-
-.light-green {
-    background-color: #98fe00;
 }
 
 * {
@@ -88,7 +50,7 @@ body::before {
     background-color: var(--main-screen-bg-color);
 }
 
-.slide {
+.pokedex .left-panel .pokemon-visual .js-flickity .slide {
     height: calc(105px * var(--transform));
     width: 100%;
     background-position: center;
@@ -96,13 +58,6 @@ body::before {
     background-size: auto calc(100px * var(--transform));
     background-image: url('/assets/images/loading.svg');
     transition: background-image 0.5s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.line {
-    width: calc(18px * var(--transform));
-    height: calc(2px * var(--transform));
-    background-color: black;
-    margin-top: calc(2px * var(--transform));
 }
 
 /*Bottom buttons  */
