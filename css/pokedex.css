@@ -17,6 +17,7 @@
 body {
     background-image: url(/assets/images/bg-low-res.jpg);
     transition: background-image 0.5s ease-in-out;
+    font-family: 'Press Start 2P', cursive;
 }
 
 body::before {
@@ -56,18 +57,12 @@ body::before {
     transition: background-image 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-#right-panel {
-    position: relative;
-    height: 100%;
-    width: 50%;
-    display: grid;
+.pokedex .right-panel {
     grid-template-rows: calc(77px * var(--transform)) repeat(2, 1fr) calc(7px * var(--transform)) repeat(2, 1fr);
     grid-row-gap: calc(7px * var(--transform));
-    border-bottom: solid black 3px;
-    border-bottom-right-radius: 10px;
 }
 
-#right-panel::before {
+.pokedex .right-panel::before {
     content: '';
     position: absolute;
     background-color: var(--main-bg-color);
@@ -75,19 +70,11 @@ body::before {
     width: 100%;
     height: calc(265px * var(--transform));
     border-right: solid black 3px;
-    border-bottom-right-radius: 7px;
+    border-bottom-right-radius: .5rem;
     z-index: -2;
 }
 
-/* top screen */
-.top-screen-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .right-panel-screen {
-    font-family: 'Press Start 2P', cursive;
     width: calc(190px * var(--transform));
     height: calc(64px * var(--transform));
     background-color: var(--secondary-screen-bg-color);
@@ -100,122 +87,4 @@ body::before {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-/* square buttons grid */
-.square-buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blue-squares-container {
-    width: calc(170px * var(--transform));
-    height: calc(60px * var(--transform));
-    display: grid;
-    gap: calc(1px * var(--transform));
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.blue-square {
-    border-radius: 2px;
-    border: black 1.5px solid;
-    background-color: var(--square-buttons-color);
-    box-shadow: inset -2px -2px #3298cb;
-}
-
-/* center buttons */
-.center-buttons-container {
-    display: flex;
-    width: calc(190px * var(--transform));
-    justify-content: space-between;
-    justify-self: center;
-}
-
-.small-reds-container {
-    display: flex;
-    gap: calc(3px * var(--transform));
-}
-
-.small-reds-container .small-light {
-    border: solid black 2px;
-    width: calc(7px * var(--transform));
-    height: calc(7px * var(--transform));
-}
-
-.small-reds-container .dot {
-    height: calc(2.5px * var(--transform));
-    width: calc(2.5px * var(--transform));
-    top: calc(1px * var(--transform));
-    left: calc(1px * var(--transform));
-}
-
-.white-squares-container {
-    display: flex;
-    justify-content: center;
-}
-
-.white-square {
-    width: calc(25px * var(--transform));
-    height: calc(25px * var(--transform));
-    border-radius: 5px;
-    border: black 2px solid;
-    background-color: #ffffff;
-    box-shadow: inset -2px -2px gray;
-}
-
-.center-right-container,
-.center-left-container {
-    display: flex;
-    width: calc(190px * var(--transform));
-    justify-content: space-between;
-    justify-self: center;
-    align-items: center;
-}
-
-.thin-buttons-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.thin-button {
-    width: calc(35px * var(--transform));
-    height: calc(5px * var(--transform));
-    border: 2px solid black;
-    background-color: var(--main-buttons-color);
-    margin-left: 10px;
-}
-
-.yellow-button {
-    justify-self: end;
-    width: calc(25px * var(--transform));
-    height: calc(25px * var(--transform));
-    border-radius: 50%;
-    border: solid 2px black;
-    margin-left: calc(7px * var(--transform));
-}
-
-.yellow-button .big-dot {
-    height: calc(7px * var(--transform));
-    width: calc(7px * var(--transform));
-    position: relative;
-    top: calc(3px * var(--transform));
-    left: calc(5px * var(--transform));
-    border-radius: 50%;
-}
-
-/* bottom screens */
-
-.bottom-screens-container {
-    display: flex;
-    align-items: center;
-    width: calc(190px * var(--transform));
-    justify-content: space-between;
-    justify-self: center;
-}
-
-.bottom-screens-container .right-panel-screen {
-    width: calc(64px * var(--transform));
-    height: calc(25px * var(--transform));
 }

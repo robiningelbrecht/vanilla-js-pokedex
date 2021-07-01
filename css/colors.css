@@ -2,7 +2,6 @@
     --main-bg-color: #CE1C24;
     --secondary-screen-bg-color: #ddd;
     --main-buttons-color: #585858;
-    --square-buttons-color: #7ca9f7;
 }
 
 .red {
@@ -37,6 +36,22 @@
     background-color: #98fe00;
 }
 
-.bg-dark-grey{
+.bg-light-blue {
+    background-color: #7ca9f7;
+}
+
+.bg-light-grey {
+    background-color: #dddddd;
+}
+
+.bg-dark-grey {
     background-color: #585858;
+}
+
+.shadow-inner-blue {
+    box-shadow: inset -2px -2px #3298cb;
+}
+
+.shadow-inner-grey {
+    box-shadow: inset -2px -2px grey;
 }

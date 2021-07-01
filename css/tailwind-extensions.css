@@ -6,6 +6,10 @@
     border-width: 3px;
 }
 
+.border-b-3{
+    border-bottom-width: 3px;
+}
+
 .rounded-1\/2{
     border-radius: 50%;
 }
