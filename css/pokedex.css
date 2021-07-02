@@ -1,10 +1,25 @@
 :root {
     --transform: 1;
+    --border--transform: 0px;
+}
+
+svg.transform-1 {
+    display: block;
+}
+svg.transform-2 {
+    display: none;
 }
 
 @media all and (min-width: calc(228px * 4)) {
     :root {
         --transform: 2;
+        --border--transform: 1px;
+    }
+    svg.transform-1 {
+        display: none;
+    }
+    svg.transform-2 {
+        display: block;
     }
 }
 
@@ -36,7 +51,6 @@ body::before {
 }
 
 .pokedex .left-panel {
-    background-color: var(--main-bg-color);
     grid-template-rows: calc(77px * var(--transform)) repeat(3, 1fr);
     grid-row-gap: calc(7px * var(--transform));
 }
@@ -44,7 +58,6 @@ body::before {
 .pokedex .left-panel .pokemon-visual {
     border-radius: 0 0 0 17%;
     grid-template-rows: 10% 72% 18%;
-    background-color: var(--secondary-screen-bg-color);
 }
 
 .pokedex .left-panel .pokemon-visual .js-flickity .slide {
@@ -65,26 +78,17 @@ body::before {
 .pokedex .right-panel::before {
     content: '';
     position: absolute;
-    background-color: var(--main-bg-color);
+    background-color: var(--bg-pokemon-red);
     bottom: 0;
     width: 100%;
     height: calc(265px * var(--transform));
-    border-right: solid black 3px;
+    border-right: solid black 2px;
     border-bottom-right-radius: .5rem;
     z-index: -2;
 }
 
-.right-panel-screen {
-    width: calc(190px * var(--transform));
-    height: calc(64px * var(--transform));
-    background-color: var(--secondary-screen-bg-color);
-    border: solid black 2px;
-    border-radius: 4px;
-    font-size: xx-small;
-    padding-left: calc(2px * var(--transform));
-    padding-right: calc(2px * var(--transform));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+@media all and (min-width: calc(228px * 4)) {
+    .pokedex .right-panel::before {
+        border-right: solid black 3px;
+    }
 }

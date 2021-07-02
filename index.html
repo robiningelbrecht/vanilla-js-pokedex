@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel=icon href="/assets/images/favicon.png" sizes="16x16" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/libraries/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="assets/libraries/flickity/flickity.min.css">
@@ -17,42 +19,44 @@
 </head>
 <body class="h-screen w-screen flex items-center justify-center overflow-x-hidden bg-center bg-cover bg-no-repeat" data-background="assets/images/bg.jpg">
 <div class="pokedex flex h-tf-342">
-    <div class="left-panel w-2/4 grid rounded-t-xl rounded-bl-xl border-3 border-black">
+    <div class="left-panel w-2/4 grid rounded-t-xl rounded-bl-xl border-tf-2 border-black bg-pokemon-red">
         <div>
-            <svg class="z-10 absolute w-tf-228 h-tf-77">
-                <!--<polyline points="0,75 70,75 90,38 228,38" style="fill: none; stroke: black; stroke-width: 3"/>-->
-                <polyline points="0,150 140,150 180,76 456,76" style="fill: none; stroke: black; stroke-width: 3"/>
+            <svg class="transform-1 z-10 absolute w-tf-228 h-tf-77">
+                <polyline points="0,75 70,75 90,38 225,38" style="fill: none; stroke: black; stroke-width: 2px"/>
+            </svg>
+            <svg class="transform-2 z-10 absolute w-tf-228 h-tf-77">
+                <polyline points="0,150 140,150 180,76 450,76" style="fill: none; stroke: black; stroke-width: 3px"/>
             </svg>
             <div class="flex items-center justify-start">
-                <div class="flex justify-center items-center border-3 border-black rounded-1/2 bg-white ml-tf-12 mt-tf-3 h-tf-60 w-tf-60">
-                    <div class="blue border-3 border-black rounded-1/2 w-tf-50 h-tf-50">
+                <div class="flex justify-center items-center border-tf-2 border-black rounded-1/2 bg-white ml-tf-12 mt-tf-3 h-tf-60 w-tf-60">
+                    <div class="blue border-tf-2 border-black rounded-1/2 w-tf-50 h-tf-50">
                         <div class="light-blue relative rounded-1/2 w-tf-15 h-tf-15 top-tf-7 left-tf-10"></div>
                     </div>
                 </div>
                 <div class="flex justify-around self-start h-full ml-tf-15 mt-tf-10 w-tf-70">
-                    <div class="red border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                    <div class="red border-tf-2 border-black rounded-1/2 w-tf-16 h-tf-16">
                         <div class="light-red relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
-                    <div class="yellow border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                    <div class="yellow border-tf-2 border-black rounded-1/2 w-tf-16 h-tf-16">
                         <div class="light-yellow relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
-                    <div class="green border-3 border-black rounded-1/2 w-tf-16 h-tf-16">
+                    <div class="green border-tf-2 border-black rounded-1/2 w-tf-16 h-tf-16">
                         <div class="light-green relative rounded-1/2 w-tf-5 h-tf-5 top-tf-2 left-tf-3"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-center items-center">
-            <div class="pokemon-visual grid w-tf-190 h-tf-150 border-3 border-black">
+            <div class="pokemon-visual grid w-tf-190 h-tf-150 border-tf-2 border-black bg-light-grey">
                 <div class="flex justify-between items-center justify-self-center w-tf-20">
                     <div class="red border border-black w-tf-5 h-tf-5 rounded-1/2"></div>
                     <div class="red border border-black w-tf-5 h-tf-5 rounded-1/2"></div>
                 </div>
-                <div class="js-flickity w-4/5 h-tf-105 justify-self-center border-2 border-black overflow-hidden rounded-lg bg-white">
+                <div class="js-flickity w-4/5 h-tf-105 justify-self-center border-tf-1 border-black overflow-hidden rounded-lg bg-white">
 
                 </div>
                 <div class="flex justify-self-center justify-between items-center w-4/5">
-                    <div class="red relative rounded-1/2 border-2 border-black w-tf-12 h-tf-12">
+                    <div class="red relative rounded-1/2 border-tf-1 border-black w-tf-12 h-tf-12">
                         <div class="light-red absolute rounded-1/2 w-tf-4 h-tf-4 top-tf-2 left-tf-2"></div>
                     </div>
                     <div>
@@ -65,15 +69,15 @@
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190 mt-tf-10">
-            <div class="w-tf-25 h-tf-25 rounded-1/2 border-2 border-black bg-dark-grey"></div>
+            <div class="w-tf-25 h-tf-25 rounded-1/2 border-tf-1 border-black bg-dark-grey"></div>
             <div class="flex justify-around gap-2">
-                <div class="red w-tf-35 h-tf-5 rounded-lg border-2 border-black"></div>
-                <div class="light-blue w-tf-35 h-tf-5 rounded-lg border-2 border-black"></div>
+                <div class="red w-tf-35 h-tf-5 rounded-lg border-tf-1 border-black"></div>
+                <div class="light-blue w-tf-35 h-tf-5 rounded-lg border-tf-1 border-black"></div>
             </div>
             <div class="flex justify-center items-center w-tf-52 h-tf-52">
-                <div class="h-tf-5 w-tf-5 rounded-1/2 border-2 border-black z-10"></div>
-                <div class="absolute h-tf-16 w-tf-52 border-2 border-black rounded-md transform rotate-90 bg-dark-grey"></div>
-                <div class="absolute h-tf-16 w-tf-52 border-2 border-black rounded-md bg-dark-grey">
+                <div class="h-tf-5 w-tf-5 rounded-1/2 border-tf-1 border-black z-10"></div>
+                <div class="absolute h-tf-16 w-tf-52 border-tf-1 border-black rounded-md transform rotate-90 bg-dark-grey"></div>
+                <div class="absolute h-tf-16 w-tf-52 border-tf-1 border-black rounded-md bg-dark-grey">
                     <div class="absolute h-tf-2 w-tf-14 top-tf--1 left-tf-18 bg-dark-grey"></div>
                     <div class="absolute h-tf-2 w-tf-14 top-tf-14 left-tf-18 bg-dark-grey"></div>
                 </div>
@@ -86,73 +90,66 @@
             </div>
         </div>
     </div>
-    <div class="right-panel relative grid h-full w-1/2 border-b-3 border-black rounded-br-lg">
+    <div class="right-panel relative grid h-full w-1/2 border-b-tf-2 border-black rounded-br-lg">
         <div>
-            <svg class="w-tf-228 h-tf-77">
-                <!--<polyline
-                        points="0,0 0,40 138,40 158,75 250,75 250,0 0,0"
-                        style="fill: transparent; stroke: none;"
-                />
+            <svg class="transform-1 w-tf-228 h-tf-77">
                 <polyline
-                        points="0,40 138,40 158,75 250,75"
-                        style="fill: none; stroke: black; stroke-width: 3"
+                        points="0,40 137,40 157,75 228,75 0,75"
+                        style="fill: #CE1C24; stroke: black; stroke-width: 2px; stroke-linejoin: round; stroke-dasharray: 250 227;"
                 />
-                <polyline
-                        points="0,41 138,41 158,77 250,77 0,77"
-                        style="fill: #CE1C24; stroke: none;"
-                />-->
+            </svg>
+            <svg class="transform-2 w-tf-228 h-tf-77">
                 <polyline
                         points="0,79 275,79 315,150 456,150 0,155"
                         style="fill: #CE1C24; stroke: black; stroke-width: 3px; stroke-linejoin: round; stroke-dasharray: 500 456;"
                 />
-
             </svg>
         </div>
         <div class="flex items-center justify-center">
-            <div class="flex items-center justify-center w-tf-190 h-tf-64 bg-light-grey border-2 border-black rounded-md text-xs">
+            <div class="flex items-center justify-center w-tf-190 h-tf-64 bg-light-grey border-tf-1 border-black rounded-md text-xs">
                 Test
             </div>
         </div>
         <div class="flex items-center justify-center">
             <div class="grid grid-cols-5 grid-rows-2 gap-1 w-tf-170 h-tf-60">
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
-                <div class="border-2 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
+                <div class="border-tf-1 border-black rounded-sm bg-light-blue shadow-inner-blue"></div>
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190">
             <div class="flex gap-2">
-                <div class="relative red border-2 border-black w-tf-7 h-tf-7 rounded-1/2">
+                <div class="relative red border-tf-1 border-black w-tf-7 h-tf-7 rounded-1/2">
                     <div class="absolute light-red w-tf-1 h-tf-1 top-tf-1 left-tf-1"></div>
                 </div>
-                <div class="relative red border-2 border-black w-tf-7 h-tf-7 rounded-1/2">
+                <div class="relative red border-tf-1 border-black w-tf-7 h-tf-7 rounded-1/2">
                     <div class="absolute light-red w-tf-1 h-tf-1 top-tf-1 left-tf-1"></div>
                 </div>
             </div>
             <div class="flex justify-between gap-2">
-                <div class="w-tf-25 h-tf-5 border-2 border-black bg-dark-grey"></div>
-                <div class="w-tf-25 h-tf-5 border-2 border-black bg-dark-grey"></div>
+                <div class="w-tf-25 h-tf-5 border-tf-1 border-black bg-dark-grey"></div>
+                <div class="w-tf-25 h-tf-5 border-tf-1 border-black bg-dark-grey"></div>
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190">
             <div class="flex justify-center">
-                <div class="w-tf-25 h-tf-25 border-2 border-black rounded-sm shadow-inner-grey bg-white"></div>
-                <div class="w-tf-25 h-tf-25 border-2 border-black rounded-sm shadow-inner-grey bg-white"></div>
+                <div class="w-tf-25 h-tf-25 border-tf-1 border-black rounded-sm shadow-inner-grey bg-white"></div>
+                <div class="w-tf-25 h-tf-25 border-tf-1 border-black rounded-sm shadow-inner-grey bg-white"></div>
             </div>
-            <div class="yellow w-tf-25 h-tf-25 border-2 border-black rounded-1/2">
+            <div class="yellow w-tf-25 h-tf-25 border-tf-1 border-black rounded-1/2">
                 <div class="relative top-tf-3 left-tf-5 light-yellow w-tf-7 h-tf-7 rounded-1/2"></div>
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190">
-            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-2 border-black rounded-md text-xs">grass</div>
-            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-2 border-black rounded-md text-xs">#1</div>
+            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">grass</div>
+            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">#1</div>
         </div>
     </div>
 </div>

@@ -1,7 +1,5 @@
 :root {
-    --main-bg-color: #CE1C24;
-    --secondary-screen-bg-color: #ddd;
-    --main-buttons-color: #585858;
+    --bg-pokemon-red: #CE1C24;
 }
 
 .red {
@@ -34,6 +32,10 @@
 
 .light-green {
     background-color: #98fe00;
+}
+
+.bg-pokemon-red{
+    background-color: var(--bg-pokemon-red);
 }
 
 .bg-light-blue {
