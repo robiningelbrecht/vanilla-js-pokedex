@@ -24,7 +24,6 @@ export default class App {
   }
 
   toggleAudio() {
-    // this.audio.duration
     this.audio.paused ? this.audio.play() : this.audio.pause();
   }
 

@@ -21,19 +21,20 @@ document.querySelector('.d-pad a.right').addEventListener('click', function () {
 document.querySelector('.d-pad a.left').addEventListener('click', function () {
   app.flivkity.previous();
 });
-document.body.onkeyup = function(e) {
-  switch(e.which) {
-    case 37: app.flivkity.previous(); break;
-    case 39: app.flivkity.next(); break;
+document.body.onkeyup = function (e) {
+  switch (e.which) {
+    case 37:
+      app.flivkity.previous();
+      break;
+    case 39:
+      app.flivkity.next();
+      break;
     //case 38: dir('up'); break;
     //case 40: dir('down'); break;
   }
 };
 
 // Event listeners for audio buttons.
-app.audio.onended = function() {
-  this.classList.add('paused');
-};
 document.querySelector('.play-button').addEventListener('click', function () {
   this.classList.toggle('paused');
   app.toggleAudio();
