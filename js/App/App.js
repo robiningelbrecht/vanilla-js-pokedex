@@ -16,7 +16,7 @@ export default class App {
 
     this.flivkity = new Flickity(this.flickity_el, {
       pageDots: false,
-      prevNextButtons: true,
+      prevNextButtons: false,
       percentPosition: false,
       draggable: true,
       cellAlign: 'left',

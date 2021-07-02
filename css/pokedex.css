@@ -6,6 +6,7 @@
 svg.transform-1 {
     display: block;
 }
+
 svg.transform-2 {
     display: none;
 }
@@ -15,9 +16,11 @@ svg.transform-2 {
         --transform: 2;
         --border--transform: 1px;
     }
+
     svg.transform-1 {
         display: none;
     }
+
     svg.transform-2 {
         display: block;
     }
@@ -91,4 +94,200 @@ body::before {
     .pokedex .right-panel::before {
         border-right: solid black 3px;
     }
+}
+
+/** D-PAD **/
+.d-pad {
+    position: relative;
+    width: calc(52px * var(--transform));
+    height: calc(52px * var(--transform));
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.d-pad a {
+    display: block;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width: 33.3%;
+    height: 43%;
+    line-height: 40%;
+    color: #fff;
+    text-align: center;
+    border: calc(1px + var(--border--transform)) solid #000;
+    background: #585858;
+}
+
+.d-pad a:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-style: solid;
+    transition: all 0.25s;
+}
+
+.d-pad a.left,
+.d-pad a.right {
+    width: 43%;
+    height: 33%;
+}
+
+.d-pad a.left:after,
+.d-pad a.right:after {
+    width: 78%;
+    height: 102%;
+}
+
+.d-pad a.up {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 17% 17% 50% 50%;
+}
+
+.d-pad a.up:after {
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0);
+    border-top-left-radius: 50%;
+    pointer-events: none;
+}
+
+.d-pad a.up:before {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 0 3px 5px 3px;
+    border-color: transparent transparent #aaa transparent;
+    border-bottom-color: #fff;
+}
+
+@media all and (min-width: calc(228px * 4)) {
+    .d-pad a.up:before {
+        border-width: 0 6px 9px 6px;
+    }
+}
+
+.d-pad a.up:active:before {
+    border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+
+.d-pad a.up:hover:before {
+    top: 35%;
+}
+
+.d-pad a.down {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50% 50% 17% 17%;
+}
+
+.d-pad a.down:after {
+    right: 0;
+    bottom: 0;
+    transform: translate(100%, 0);
+    border-bottom-right-radius: 50%;
+    pointer-events: none;
+}
+
+.d-pad a.down:before {
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-width: 5px 3px 0 3px;
+    border-color: #aaa transparent transparent transparent;
+    border-top-color: #fff;
+}
+
+@media all and (min-width: calc(228px * 4)) {
+    .d-pad a.down:before {
+        border-width: 9px 6px 0 6px;
+    }
+}
+
+.d-pad a.down:active:before {
+    border-top-color: rgba(0, 0, 0, 0.6);
+}
+
+.d-pad a.down:hover:before {
+    bottom: 35%;
+}
+
+.d-pad a.left {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border-radius: 17% 50% 50% 17%;
+}
+
+.d-pad a.left:after {
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    border-bottom-left-radius: 50%;
+    pointer-events: none;
+}
+
+.d-pad a.left:before {
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 3px 5px 3px 0;
+    border-color: transparent #aaa transparent transparent;
+    border-right-color: #fff;
+}
+
+@media all and (min-width: calc(228px * 4)) {
+    .d-pad a.left:before {
+        border-width: 6px 9px 6px 0;
+    }
+}
+
+.d-pad a.left:active:before {
+    border-right-color: rgba(0, 0, 0, 0.6);
+}
+
+.d-pad a.left:hover:before {
+    left: 35%;
+}
+
+.d-pad a.right {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    border-radius: 50% 17% 17% 50%;
+}
+
+.d-pad a.right:after {
+    right: 0;
+    top: 0;
+    transform: translate(0, -100%);
+    border-top-right-radius: 50%;
+    pointer-events: none;
+}
+
+.d-pad a.right:before {
+    right: 40%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    border-width: 3px 0 3px 5px;
+    border-color: transparent transparent transparent #aaa;
+    border-left-color: #fff;
+}
+
+@media all and (min-width: calc(228px * 4)) {
+    .d-pad a.right:before {
+        border-width: 6px 0 6px 9px;
+    }
+}
+
+.d-pad a.right:active:before {
+    border-left-color: rgba(0, 0, 0, 0.6);
+}
+
+.d-pad a.right:hover:before {
+    right: 35%;
 }
