@@ -1,10 +1,9 @@
-import PokeApi from "./PokeApi.js";
-
 export default class App {
-  constructor() {
+  constructor(poke_api, audio) {
     this.body = document.querySelector('body');
     this.flickity_el = document.querySelector('div.js-flickity');
-    this.pokeApi = new PokeApi();
+    this.pokeApi = poke_api;
+    this.audio = audio;
   }
 
   init() {
@@ -22,6 +21,11 @@ export default class App {
       cellAlign: 'left',
       contain: true
     });
+  }
+
+  toggleAudio() {
+    // this.audio.duration
+    this.audio.paused ? this.audio.play() : this.audio.pause();
   }
 
   lazyLoadBackground() {

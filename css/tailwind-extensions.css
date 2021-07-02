@@ -3354,18 +3354,17 @@
     top: calc(-1px * var(--transform));
 }
 
-.border-3 {
-    border-width: 3px;
-}
-
-.border-b-3 {
-    border-bottom-width: 3px;
-}
-
 .rounded-1\/2 {
     border-radius: 50%;
 }
 
 .w-4\/5 {
     width: 80%;
+}
+
+.transform.translate-full{
+    transform: translate(0, 100%);
+}
+.transform.translate-full-reverse{
+    transform: translate(0, -100%);
 }

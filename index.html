@@ -17,7 +17,8 @@
     <link href="css/colors.css" rel="stylesheet">
     <link href="css/pokedex.css" rel="stylesheet">
 </head>
-<body class="h-screen w-screen flex items-center justify-center overflow-x-hidden bg-center bg-cover bg-no-repeat" data-background="assets/images/bg.jpg">
+<body class="h-screen w-screen flex items-center justify-center overflow-x-hidden bg-center bg-cover bg-no-repeat"
+      data-background="assets/images/bg.jpg">
 <div class="pokedex flex h-tf-342">
     <div class="left-panel w-2/4 grid rounded-t-xl rounded-bl-xl border-tf-2 border-black bg-pokemon-red">
         <div>
@@ -69,16 +70,23 @@
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190 mt-tf-10">
-            <div class="w-tf-25 h-tf-25 rounded-1/2 border-tf-1 border-black bg-dark-grey"></div>
+            <div class="flex justify-center items-center w-tf-25 h-tf-25 rounded-1/2 border-tf-1 border-black bg-dark-grey">
+                <a class="play-button paused block overflow-hidden relative w-tf-9 h-tf-9" href="#" title="Toggle audio">
+                    <div class="left h-full float-left bg-white overflow-hidden"></div>
+                    <div class="right h-full float-right bg-white"></div>
+                    <div class="triangle-1 absolute top-0 right-0 bg-transparant w-0 h-0 transform translate-full-reverse"></div>
+                    <div class="triangle-2 absolute top-0 right-0 bg-transparant w-0 h-0 transform translate-full"></div>
+                </a>
+            </div>
             <div class="flex justify-around gap-2">
                 <div class="red w-tf-35 h-tf-5 rounded-lg border-tf-1 border-black"></div>
                 <div class="light-blue w-tf-35 h-tf-5 rounded-lg border-tf-1 border-black"></div>
             </div>
             <nav class="d-pad">
                 <a class="up" href="#"></a>
-                <a class="right" href="#"></a>
+                <a class="right" href="#" title="Next Pokémon"></a>
                 <a class="down" href="#"></a>
-                <a class="left" href="#"></a>
+                <a class="left" href="#" title="Previous Pokémon"></a>
             </nav>
         </div>
         <div class="flex items-center justify-center justify-self-center">
@@ -146,8 +154,12 @@
             </div>
         </div>
         <div class="flex items-center justify-between justify-self-center w-tf-190">
-            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">grass</div>
-            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">#1</div>
+            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">
+                grass
+            </div>
+            <div class="w-tf-64 h-tf-25 flex items-center justify-center bg-light-grey border-tf-1 border-black rounded-md text-xs">
+                #1
+            </div>
         </div>
     </div>
 </div>

@@ -96,6 +96,36 @@ body::before {
     }
 }
 
+/** AUDIO CONTROLS **/
+.play-button .left {
+    width: 36%;
+    transition: all 0.25s ease;
+}
+.play-button .right {
+    width: 36%;
+    transition: all 0.25s ease;
+}
+
+.play-button .triangle-1,
+.play-button .triangle-2 {
+    border-right: 18px solid #585858;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    transition: transform 0.25s ease;
+}
+.play-button.paused .left {
+    width: 50%;
+}
+.play-button.paused .right {
+    width: 50%;
+}
+.play-button.paused .triangle-1 {
+    transform: translate(0, -50%);
+}
+.play-button.paused .triangle-2 {
+    transform: translate(0, 50%);
+}
+
 /** D-PAD **/
 .d-pad {
     position: relative;
