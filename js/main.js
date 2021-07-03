@@ -5,6 +5,7 @@ import Pokemon from "./App/Pokemon.js";
 
 let pokemon_id_el = document.querySelector('div.pokemon-id');
 let pokemon_types_el = document.querySelector('div.pokemon-types');
+let pokemon_name_el = document.querySelector('div.pokemon-name');
 let pokemon_moves_el = document.querySelectorAll('div.pokemon-moves > div > div');
 let pokemon_info_el = document.querySelector('div.pokemon-info');
 
@@ -19,8 +20,8 @@ document.body.addEventListener('PokemonUpdated', (event) => {
   app.flickity.cells[index].element.style.backgroundColor = app.getPokedexHexColor(pokemon.getColor());
 
   // Update metadata.
+  pokemon_name_el.innerHTML = pokemon.getName();
   pokemon_info_el.innerHTML = [
-    'Name: ' + pokemon.getName(),
     'Height: ' + (pokemon.getHeight() * 10) + 'cm',
     'Weight: ' + (pokemon.getWeight() / 10) + 'kg',
     'Base xp: ' + pokemon.getBaseExperience(),
@@ -72,6 +73,9 @@ document.querySelector('.d-pad a.down').addEventListener('click', () => {
   slide_up_down_el.classList.remove('up');
 });
 // Event listener for pokelist.
+document.querySelector('div.hamburger-menu').addEventListener('click', ()=>{
+  slide_up_down_el.classList.toggle('up');
+});
 slide_up_down_el.addEventListener('click', async (event) => {
   if (event.target.dataset.pokeIndex) {
     let index = event.target.dataset.pokeIndex;
