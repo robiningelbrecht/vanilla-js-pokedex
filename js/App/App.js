@@ -24,6 +24,7 @@ export default class App {
       prevNextButtons: false,
       percentPosition: false,
       draggable: true,
+      accessibility: false,
       cellAlign: 'left',
       contain: true
     });
