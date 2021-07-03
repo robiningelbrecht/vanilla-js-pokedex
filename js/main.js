@@ -15,7 +15,7 @@ document.body.addEventListener('PokemonUpdated', (event) => {
   let index = pokemon.getId() - 1;
 
   // Update Flickity content.
-  app.flickity.cells[index].element.style.backgroundImage = 'url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/' + pokemon.getId() + '.svg)';
+  app.flickity.cells[index].element.style.backgroundImage = 'url(' + pokemon.getSprite() + ')';
   app.flickity.cells[index].element.style.backgroundColor = app.getPokedexHexColor(pokemon.getColor());
 
   // Update metadata.
@@ -42,6 +42,7 @@ let slide_up_down_el = document.querySelector('.slide-up-down');
 
 // Init app.
 let app = new App(
+  898,
   new PokeApi(),
   new Cache(),
   new Audio("/assets/audio/theme.mp3"),

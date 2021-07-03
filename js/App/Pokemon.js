@@ -1,6 +1,6 @@
 export default class Pokemon {
 
-  constructor(id, name, color, base_experience, height, weight, abilities, moves, types, stats) {
+  constructor(id, name, color, base_experience, height, weight, abilities, moves, types, stats, sprite) {
     this._id = id;
     this._name = name;
     this._color = color;
@@ -11,6 +11,7 @@ export default class Pokemon {
     this._moves = moves;
     this._types = types;
     this._stats = stats;
+    this._sprite = sprite;
   }
 
   getId() {
@@ -53,6 +54,10 @@ export default class Pokemon {
     return this._stats;
   }
 
+  getSprite() {
+    return this._sprite;
+  }
+
   static createFromApi(api_pokemon, api_species) {
     return new Pokemon(
       api_pokemon.id,
@@ -76,6 +81,7 @@ export default class Pokemon {
           'base_stat': stat.base_stat
         };
       }),
+      api_pokemon.sprites.other.dream_world.front_default || api_pokemon.sprites.other["official-artwork"].front_default
     );
   }
 
@@ -90,7 +96,8 @@ export default class Pokemon {
       data._abilities,
       data._moves,
       data._types,
-      data._stats
+      data._stats,
+      data._sprite
     );
   }
 

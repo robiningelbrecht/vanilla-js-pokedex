@@ -1,7 +1,8 @@
 import Pokemon from "./Pokemon.js";
 
 export default class App {
-  constructor(poke_api, cache, audio, flickity_el) {
+  constructor(max_pokemons, poke_api, cache, audio, flickity_el) {
+    this.maxPokemons = max_pokemons;
     this.body = document.querySelector('body');
     this.flickityEl = flickity_el;
     this.pokeApi = poke_api;
@@ -11,7 +12,7 @@ export default class App {
 
   init() {
     // Add slides.
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= this.maxPokemons; i++) {
       let slide = document.createElement('div');
       slide.classList.add(...['slide']);
       this.flickityEl.appendChild(slide);
@@ -71,7 +72,7 @@ export default class App {
   }
 
   async populatePokeList(el) {
-    let list = await this.pokeApi.getList(151);
+    let list = await this.pokeApi.getList(this.maxPokemons);
     list.results.forEach((item, index) => {
       let c = document.createElement('div');
       c.dataset.pokeIndex = (index + 1);
