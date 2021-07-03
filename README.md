@@ -1,5 +1,7 @@
 # Pokedex in vanilla JS
 
+![Preview](https://github.com/robiningelbrecht/vanilla-js-pokedex/raw/master/web/assets/images/preview.png "Preview")
+
 Demo: [https://pokedex.robiningelbrecht.be/](https://pokedex.robiningelbrecht.be/)
 
 ## Codepen heroes
