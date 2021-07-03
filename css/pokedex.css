@@ -36,6 +36,15 @@ body {
     background-image: url(/assets/images/bg-low-res.jpg);
     transition: background-image 0.5s ease-in-out;
     font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    line-height: 0.6rem;
+}
+
+@media all and (min-width: calc(228px * 4)) {
+    body {
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
 }
 
 body::before {
@@ -61,6 +70,16 @@ body::before {
 .pokedex .left-panel .pokemon-visual {
     border-radius: 0 0 0 17%;
     grid-template-rows: 10% 72% 18%;
+}
+
+.pokedex .left-panel .pokemon-visual .js-flickity .slide-up-down {
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.pokedex .left-panel .pokemon-visual .js-flickity .slide-up-down.up {
+    top: 0;
 }
 
 .pokedex .left-panel .pokemon-visual .js-flickity .slide {
@@ -101,6 +120,7 @@ body::before {
     width: 36%;
     transition: all 0.25s ease;
 }
+
 .play-button .right {
     width: 36%;
     transition: all 0.25s ease;
@@ -113,15 +133,19 @@ body::before {
     border-bottom: 9px solid transparent;
     transition: transform 0.25s ease;
 }
+
 .play-button.paused .left {
     width: 50%;
 }
+
 .play-button.paused .right {
     width: 50%;
 }
+
 .play-button.paused .triangle-1 {
     transform: translate(0, -50%);
 }
+
 .play-button.paused .triangle-2 {
     transform: translate(0, 50%);
 }
@@ -320,4 +344,19 @@ body::before {
 
 .d-pad a.right:hover:before {
     right: 35%;
+}
+
+/** SCROLLBAR **/
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: calc(2px * var(--transform));
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #585858;
+    height: calc(17px * var(--transform));
 }

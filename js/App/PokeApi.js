@@ -12,9 +12,12 @@ export default class PokeApi {
     return await this.request('/pokemon/' + identifier);
   }
 
+  async getList(limit) {
+    return await this.request('/pokemon?limit=' + limit);
+  }
+
   async getSpecies(identifier) {
     return await this.request('/pokemon-species/' + identifier);
   }
-
 
 }
