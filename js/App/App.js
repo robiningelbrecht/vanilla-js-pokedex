@@ -1,9 +1,9 @@
 import Pokemon from "./Pokemon.js";
 
 export default class App {
-  constructor(poke_api, cache, audio) {
+  constructor(poke_api, cache, audio, flickity_el) {
     this.body = document.querySelector('body');
-    this.flickity_el = document.querySelector('div.js-flickity');
+    this.flickityEl = flickity_el;
     this.pokeApi = poke_api;
     this.cache = cache;
     this.audio = audio;
@@ -14,11 +14,11 @@ export default class App {
     for (let i = 1; i <= 151; i++) {
       let slide = document.createElement('div');
       slide.classList.add(...['slide']);
-      this.flickity_el.appendChild(slide);
+      this.flickityEl.appendChild(slide);
     }
 
     // Init flickity.
-    this.flickity = new Flickity(this.flickity_el, {
+    this.flickity = new Flickity(this.flickityEl, {
       cellSelector: '.slide',
       pageDots: false,
       prevNextButtons: false,

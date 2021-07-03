@@ -44,7 +44,8 @@ let slide_up_down_el = document.querySelector('.slide-up-down');
 let app = new App(
   new PokeApi(),
   new Cache(),
-  new Audio("/assets/audio/theme.mp3")
+  new Audio("/assets/audio/theme.mp3"),
+  document.querySelector('div.js-flickity')
 );
 app.init();
 app.lazyLoadBackground();
@@ -73,9 +74,10 @@ document.querySelector('.d-pad a.down').addEventListener('click', () => {
 slide_up_down_el.addEventListener('click', async (event) => {
   if (event.target.dataset.pokeIndex) {
     let index = event.target.dataset.pokeIndex;
+
+    slide_up_down_el.classList.remove('up');
     app.flickity.select(index - 1);
     await app.updatePokeInfo(index);
-    slide_up_down_el.classList.remove('up');
   }
 });
 
