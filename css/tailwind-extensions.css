@@ -3368,3 +3368,12 @@
 .transform.translate-full-reverse{
     transform: translate(0, -100%);
 }
+
+.font-tf-xs {
+    font-size: calc(.5rem * var(--transform));
+    line-height: calc(.6rem * var(--transform));
+}
+
+.font-tf-xs {
+    font-size: calc(.3rem * var(--transform));
+}

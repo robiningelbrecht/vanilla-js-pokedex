@@ -50,8 +50,6 @@ export default class App {
   }
 
   async updatePokeInfo(id) {
-    let index = id - 1;
-
     // Fetch pokemon from cache.
     let pokemon = this.cache.getPokemon(id);
 
@@ -64,8 +62,11 @@ export default class App {
       this.cache.addPokemon(id, pokemon);
     }
 
-    this.flickity.cells[index].element.style.backgroundImage = 'url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/' + id + '.svg)';
-    this.flickity.cells[index].element.style.backgroundColor = this.getPokedexHexColor(pokemon.getColor());
+    this.body.dispatchEvent(new CustomEvent('PokemonUpdated', {
+      detail: {
+        pokemon
+      }
+    }));
   }
 
   async populatePokeList(el) {

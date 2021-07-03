@@ -1,5 +1,3 @@
-import Pokemon from "./Pokemon.js";
-
 export default class Cache {
 
   constructor() {
@@ -11,7 +9,7 @@ export default class Cache {
     let cache = this.__get();
 
     if (cache.hasOwnProperty(id)) {
-      return Pokemon.createFromCache(cache[id]);
+      return cache[id];
     }
 
     return null;

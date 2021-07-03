@@ -13,7 +13,6 @@ export default class Pokemon {
     this._stats = stats;
   }
 
-
   getId() {
     return this._id;
   }
@@ -63,17 +62,17 @@ export default class Pokemon {
       api_pokemon.height,
       api_pokemon.weight,
       api_pokemon.abilities.map((ability) => {
-        return ability.ability._name;
+        return ability.ability.name;
       }),
       api_pokemon.moves.map((move) => {
-        return move.move._name;
+        return move.move.name;
       }),
       api_pokemon.types.map((type) => {
-        return type.type._name;
+        return type.type.name;
       }),
       api_pokemon.stats.map((stat) => {
         return {
-          'name': stat.stat._name,
+          'name': stat.stat.name,
           'base_stat': stat.base_stat
         };
       }),
@@ -85,7 +84,7 @@ export default class Pokemon {
       data._id,
       data._name,
       data._color,
-      data._base_experience,
+      data._baseExperience,
       data._height,
       data._weight,
       data._abilities,
