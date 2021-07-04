@@ -115,6 +115,26 @@ body::before {
     }
 }
 
+@media all and (min-width: calc(228px * 4)) {
+    .pokedex .right-panel::before {
+        border-right: solid black 3px;
+    }
+}
+
+/** ONLY LEFT PANEL WHEN SCREEN IS TOO SMALL **/
+@media all and (max-width: 460px) {
+    .pokedex{
+        justify-content: center;
+    }
+    .pokedex .left-panel{
+        width: 228px;
+    }
+    .pokedex .right-panel {
+        display: none;
+        width: 0;
+    }
+}
+
 /** AUDIO CONTROLS **/
 .play-button .left {
     width: 36%;
