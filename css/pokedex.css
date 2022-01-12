@@ -33,7 +33,7 @@ svg.transform-2 {
 }
 
 body {
-    background-image: url(/assets/images/bg-low-res.jpg);
+    background-image: url(../assets/images/bg-low-res.jpg);
     transition: background-image 0.5s ease-in-out;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.5rem;
