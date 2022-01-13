@@ -46,7 +46,7 @@ let app = new App(
   898,
   new PokeApi(),
   new Cache(),
-  new Audio("./../assets/audio/theme.mp3"),
+  new Audio("assets/audio/theme.mp3"),
   document.querySelector('div.js-flickity')
 );
 app.init();
