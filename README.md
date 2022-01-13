@@ -2,7 +2,7 @@
 
 ![Preview](https://github.com/robiningelbrecht/vanilla-js-pokedex/raw/master/assets/images/preview.png "Preview")
 
-Demo: [hhttps://robiningelbrecht.github.io/projects/vanilla-js-pokedex](https://robiningelbrecht.github.io/projects/vanilla-js-pokedex)
+Demo: [https://robiningelbrecht.github.io/projects/vanilla-js-pokedex](https://robiningelbrecht.github.io/projects/vanilla-js-pokedex)
 
 ## Codepen heroes
 
